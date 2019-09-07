@@ -1,0 +1,143 @@
+﻿<div class="container" ng-controller="cidadeCtrl">
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <button type="button" class="btn btn-primary" data-target="#AdicionarCidade" data-toggle="modal">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+
+        <table class="table table-bordered">
+            <thead style="background-color: grey;">
+                <tr>
+                    <th class="text-left">Nome</th>
+                    <th class="text-center">País</th>
+                    <th class="text-center">Latitude</th>
+                    <th class="text-center">Longitude</th>
+                    <th class="text-center">Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="cidade in cidadesCadastradas track by $index">
+                    <td class="text-left">{{cidade.Nome}}</td>
+                    <td class="text-center">{{cidade.Pais}}</td>
+                    <td class="text-center">{{cidade.Latitude}}</td>
+                    <td class="text-center">{{cidade.Longitude}}</td>
+                    <td class="text-center" style="width: 200px;">
+                        <a href="#"
+                           data-target="#PrevisaoTempoCidade"
+                           data-toggle="modal" class="btn btn-primary"
+                           ng-click="buscarPrevisaoTempo(cidade.OpenWeatherId)">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                        <a href="#"
+                           data-target="#ExcluirCidade"
+                           id="btnExcluir"
+                           data-toggle="modal" class="btn btn-danger"
+                           ng-click="excluirCidade(cidade.Id)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="modal" id="AdicionarCidade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-info">Adicionar Cidade</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" name="AdicionarNovaCidadeForm" id="AdicionarNovaCidadeForm">
+                            <div class="form-group">
+                                <label for="nome" class="col-md-3">Nome da cidade *</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="nome" ng-model="nome" placeholder="Nome da cidade" name="nome" required />
+                                </div>
+                                <div class="col-md-1">
+                                    <button type="button" class="btn btn-primary" ng-click="buscarCidadesPeloNome()" ng-disabled="AdicionarNovaCidadeForm.$invalid">Buscar</button>
+                                </div>
+                            </div>
+                            <table class="table table-bordered" id="tblCidades">
+                                <thead style="background-color: grey;">
+                                    <tr>
+                                        <th class="text-left">Nome</th>
+                                        <th class="text-center">País</th>
+                                        <th class="text-center">Latitude</th>
+                                        <th class="text-center">Longitude</th>
+                                        <th class="text-center">Ação</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr ng-repeat="cidade in cidades">
+                                        <td class="text-left">{{cidade.Nome}}</td>
+                                        <td class="text-center">{{cidade.Pais}}</td>
+                                        <td class="text-center">{{cidade.Latitude}}</td>
+                                        <td class="text-center">{{cidade.Longitude}}</td>
+                                        <td class="text-center" style="width: 50px;">
+                                            <button type="button" class="btn btn-primary" ng-click="adicionarCidade(cidade)">
+                                                <span class="glyphicon glyphicon-plus"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="limparDados()">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="PrevisaoTempoCidade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="text-info">Previsão do Tempo</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" name="PrevisaoTempoCidadeForm">
+                            <div class="card-body" ng-repeat="previsao in previsoesTempo">
+                                <h4 class="card-title">{{previsao.Data}}</h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">Hora</th>
+                                            <th class="text-left">Clima</th>
+                                            <th class="text-center">Min</th>
+                                            <th class="text-center">Máx</th>
+                                            <th class="text-center">Umidade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="previsaoHora in previsao.PrevisaoHoras">
+                                            <td class="text-center">{{previsaoHora.Hora}}</td>
+                                            <td class="text-left"><img id="wicon" ng-src="http://openweathermap.org/img/w/{{previsaoHora.Icone}}.png" alt="Weather icon">{{previsaoHora.Descricao}}</td>
+                                            <td class="text-center">{{previsaoHora.TemperaturaMinima}} ºC</td>
+                                            <td class="text-center">{{previsaoHora.TemperaturaMaxima}} ºC</td>
+                                            <td class="text-center">{{previsaoHora.Umidade}}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="limparDados()">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts {
+    <script src="~/AngularJsApp/Cidade/module.js"></script>
+    <script src="~/AngularJsApp/Cidade/service.js"></script>
+    <script src="~/AngularJsApp/Cidade/controller.js"></script>
+}

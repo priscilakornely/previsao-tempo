@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo.Dominio", "PrevisaoTempo.Dominio\PrevisaoTempo.Dominio.csproj", "{F93FCB12-B13B-40E7-8C0A-634C23DAA284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo.Infra.Data", "PrevisaoTempo.Infra.Data\PrevisaoTempo.Infra.Data.csproj", "{E34480BB-9A87-4710-A700-4D09DE790682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo", "PrevisaoTempo\PrevisaoTempo.csproj", "{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{9BCDF389-8C0D-48D1-9AEB-4DC9109A9F03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{1206C53F-33D1-4C6A-A412-768E8FCE2B4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{1DB6B951-A15C-4ABB-ADA9-F52EF097F6F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplicacao", "Aplicacao", "{2D924F85-912E-4B49-A7FE-96FAF0BFFBC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo.Aplicacao", "PrevisaoTempo.Aplicacao\PrevisaoTempo.Aplicacao.csproj", "{1526A442-9E01-451B-B391-4D0FC368242F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{0CB070D1-9F97-49A8-8305-4B11F93FE599}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0E4EDBD4-E74E-4F69-90B4-64FBF44DDC09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{9EFC618B-87DF-4BDA-A821-3BBCB72B45A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo.Testes", "PrevisaoTempo.Testes\PrevisaoTempo.Testes.csproj", "{8761A224-CF3A-4ACE-8B5F-4BF68B892D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrevisaoTempo.Infra.CrossCutting.IoC", "PrevisaoTempo.Infra.CrossCutting.IoC\PrevisaoTempo.Infra.CrossCutting.IoC.csproj", "{2D391F90-031C-488A-ABB3-B206EC58CCAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F93FCB12-B13B-40E7-8C0A-634C23DAA284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93FCB12-B13B-40E7-8C0A-634C23DAA284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93FCB12-B13B-40E7-8C0A-634C23DAA284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93FCB12-B13B-40E7-8C0A-634C23DAA284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34480BB-9A87-4710-A700-4D09DE790682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34480BB-9A87-4710-A700-4D09DE790682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34480BB-9A87-4710-A700-4D09DE790682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34480BB-9A87-4710-A700-4D09DE790682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1526A442-9E01-451B-B391-4D0FC368242F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1526A442-9E01-451B-B391-4D0FC368242F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1526A442-9E01-451B-B391-4D0FC368242F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1526A442-9E01-451B-B391-4D0FC368242F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8761A224-CF3A-4ACE-8B5F-4BF68B892D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8761A224-CF3A-4ACE-8B5F-4BF68B892D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8761A224-CF3A-4ACE-8B5F-4BF68B892D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8761A224-CF3A-4ACE-8B5F-4BF68B892D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D391F90-031C-488A-ABB3-B206EC58CCAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D391F90-031C-488A-ABB3-B206EC58CCAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D391F90-031C-488A-ABB3-B206EC58CCAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D391F90-031C-488A-ABB3-B206EC58CCAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F93FCB12-B13B-40E7-8C0A-634C23DAA284} = {1206C53F-33D1-4C6A-A412-768E8FCE2B4C}
+		{E34480BB-9A87-4710-A700-4D09DE790682} = {0E4EDBD4-E74E-4F69-90B4-64FBF44DDC09}
+		{9C8A8FEB-EAD1-4507-8B53-A91C09AF2E1A} = {9BCDF389-8C0D-48D1-9AEB-4DC9109A9F03}
+		{1526A442-9E01-451B-B391-4D0FC368242F} = {2D924F85-912E-4B49-A7FE-96FAF0BFFBC4}
+		{0CB070D1-9F97-49A8-8305-4B11F93FE599} = {1DB6B951-A15C-4ABB-ADA9-F52EF097F6F9}
+		{0E4EDBD4-E74E-4F69-90B4-64FBF44DDC09} = {1DB6B951-A15C-4ABB-ADA9-F52EF097F6F9}
+		{8761A224-CF3A-4ACE-8B5F-4BF68B892D63} = {9EFC618B-87DF-4BDA-A821-3BBCB72B45A5}
+		{2D391F90-031C-488A-ABB3-B206EC58CCAF} = {0CB070D1-9F97-49A8-8305-4B11F93FE599}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CED35E6-8221-4CBE-A2AE-E93F7F2F9CD7}
+	EndGlobalSection
+EndGlobal
