@@ -11,7 +11,7 @@ Estrutura/camadas do projeto:
 2. **Apresentação**
     - Interface de usuário (UI)
 3. **Domínio**
-    - Camada onde ficam as negras de negócio
+    - Camada onde ficam as regras de negócio
 4. **Infra**
     - **CrossCutting**
         - Injeção de dependência (IoC)
